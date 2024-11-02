@@ -8,7 +8,7 @@
 
 
 ### Team Members
-- Team Lead: Anju Krishna - LBSITW,Poojappura,Trivandrum
+- Team Lead: Anju Krishna S.B - LBSITW,Poojappura,Trivandrum
 - Member 2: Afrah Fathima - LBSITW,Poojappura,Trivandrum
 - Member 3: Gayatri K.B -LBSITW,Poojappura,Trivandrum
 
@@ -116,7 +116,7 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- Anju Krishna: Equally Contributed
+- Anju Krishna S.B: Equally Contributed
 - Afrah Fathima:Equally Contributed
 - Gayatri K.B:Equally Contributed
 
