@@ -39,10 +39,8 @@ For Software:
 [commands]
 
 # Run
-To open the app in your browser, use the following:
 
-http://127.0.0.1:5500/sbs.html
-
+](https://github.com/Afrxh/useless_project_temp)
 ### Project Documentation
 For Software:
 
