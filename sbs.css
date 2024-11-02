@@ -1,0 +1,96 @@
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background color */
+    background-image: url('img/bgimg.png'); /* Background image */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the background image */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: start; /* Align items to the start */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Header Styles */
+h1 {
+    color: #111010; /* Dark text color */
+    margin: 20px 0; /* Space around the header */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Font for the header */
+    font-style: italic; /* Italicize the text */
+    font-weight: 900; /* Bold weight */
+    font-size: 2.5em; /* Increased font size for better visibility */
+}
+
+/* Main Section Styles */
+#SBS {
+    text-align: center; /* Center text within this section */
+    font-size: 1.5em; /* Base font size */
+    font-weight: 900; /* Bold text */
+    font-style: italic; /* Italicized font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    height: 100%; /* Full height of the parent */
+    position: relative; /* Required for sound wave animation */
+}
+
+/* Button Styles */
+#recordButton, #showFact {
+    padding: 10px 20px; /* Padding for buttons */
+    font-size: medium; /* Medium font size */
+    font-weight: 800; /* Semi-bold weight */
+    font-style: italic; /* Italicize button text */
+    color: rgb(0, 0, 0); /* Text color */
+    background-color: rgba(244, 243, 243, 0.871); /* Light background for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#recordButton:hover, #showFact:hover {
+    background-color: rgb(211, 184, 195); /* Darker background on hover */
+}
+
+/* Display Text Styles */
+#displayText {
+    font-size: 18px; /* Font size for display text */
+    margin-top: 10px; /* Space above display text */
+    font-weight: 700; /* Bold weight */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Font for display text */
+    color: #27942cc0; /* Text color */
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed; /* Fixed position for popup */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to center */
+    background-color: white; /* White background for popup */
+    border: 2px solid #333; /* Dark border */
+    padding: 20px; /* Padding within the popup */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    z-index: 10; /* High stacking order */
+}
+
+/* Hide element utility */
+.hidden {
+    display: none; /* Hide element when needed */
+}
+
+/* Subtitle Styles */
+h2 {
+    color: #3e2723; /* Orange color for subtitles */
+    font-size: 1.5em; /* Font size for subtitle */
+    margin-bottom: 20px; /* Space below subtitle */
+}
+
+
+

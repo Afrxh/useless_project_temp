@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirpify</title>
+    <link rel="stylesheet" href="sbs.css">
+    <link rel="icon" href="img/icon sbs.png">
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-image: url('img/bgimg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 20px; /* Padding to prevent overlap with top image */
+        }
+
+        #topLeftImage {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px; /* Adjust width as needed */
+            height: auto;
+        }
+
+        h1 {
+            color: #090301;
+            font-size: 2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #SBS {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: x-large;
+            font-weight: 900;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: auto;
+            margin-bottom: auto;
+            position: relative; /* Relative positioning for sound wave animation */
+        }
+
+        #recordButton, #showFact {
+            padding: 10px 20px;
+            font-size: medium;
+            font-weight: 800;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+            background-color: rgba(244, 243, 243, 0.871);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #recordButton:hover, #showFact:hover {
+            background-color: rgb(211, 184, 195);
+        }
+
+        #displayText {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        h2 {
+            color: #3e273e;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid #333;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            display: none; /* Initially hidden */
+        }
+
+        .popup.visible {
+            display: block; /* Show when visible */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+
+        
+       
+    </style>
+</head>
+<body>
+    <img id="topLeftImage" src="img/logo.jpg" alt="Chirpify Logo">
+
+    <h1>WELCOME TO "THE SPEECH TO BIRDSONG TRANSLATOR"</h1>
+
+    <section id="SBS">
+        <h2>Turn your voice into joyful chirps:</h2>
+        <button id="recordButton">Record Speech</button>
+        <button id="showFact">Show Random Bird Fact</button>
+        <p id="displayText">Press the button and start speaking!</p>
+        <audio id="birdSound" src="chirpify.mp3" preload="auto"></audio>
+        <div id="soundWave"></div> <!-- Sound wave animation -->
+    </section>
+
+    <div id="factPopup" class="popup">
+        <p id="factText"></p>
+        <button id="closePopup">Close</button>
+    </div>
+
+    
+    <script src="sbs.js"></script>
+    <script>
+        const facts = [
+            "Eager Emus: What do you call an emu who loves to tell stories? An emu-thologist!",
+            "Why don’t ostriches ever play hide and seek? Because they’ll always bury their heads in the sand and forget what they were doing!",
+            "A bird doesn't sing because it has an answer; it sings because it has a song. – Maya Angelou",
+            "The early bird might get the worm, but the second mouse gets the cheese. – Anonymous",
+            "Homing pigeons can find their way home from hundreds of miles away.",
+            "Flamingos can only eat when their heads are upside down!",
+            "An ostrich can run up to 45 miles per hour.",
+            "Hummingbirds have the fastest heartbeat of any bird, reaching up to 1,200 beats per minute.",
+            "Did you know that some birds can sing in different languages? Just imagine a parrot trying to order a pizza in Italian—'Pollo con extra formaggio, per favore!'",
+            "Why don’t penguins like talking to strangers at parties? Because they find it hard to break the ice!",
+            "The dodo bird went extinct not because it couldn't fly, but because it couldn't stop eating! They were so focused on munching that they didn’t see humans coming!"
+        ];
+
+        document.getElementById('showFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factText').textContent = facts[randomIndex];
+            document.getElementById('factPopup').classList.add('visible');
+        });
+
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('factPopup').classList.remove('visible');
+        });
+
+        document.getElementById('recordButton').addEventListener('click', function() {
+            const soundWave = document.getElementById('soundWave');
+            soundWave.classList.add('animate'); // Start animation
+            // Add functionality for recording speech here
+        });
+    </script>
+</body>
+</html>
